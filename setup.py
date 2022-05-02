@@ -43,7 +43,7 @@ CLASSIFIERS = [
 
 
 setup(
-    name='aldryn-search',
+    name='aldryn-search-Zephyrus5',
     version=__version__,
     author='Benjamin Wohlwend',
     author_email='piquadrat@gmail.com',
