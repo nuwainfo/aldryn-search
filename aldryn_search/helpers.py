@@ -15,10 +15,7 @@ from .utils import (
 )
 
 
-try:
-    from django.utils.encoding import force_unicode
-except ImportError:
-    from django.utils.encoding import force_text as force_unicode
+from django.utils.encoding import force_str
 
 
 EXCLUDED_PLUGINS = getattr(settings, 'ALDRYN_SEARCH_EXCLUDED_PLUGINS', [])
@@ -41,7 +38,7 @@ def _render_plugin(plugin, context, renderer=None):
 
 
 def get_cleaned_bits(data):
-    decoded = force_unicode(data)
+    decoded = force_str(data)
     stripped = strip_tags(decoded)
     return smart_split(stripped)
 
